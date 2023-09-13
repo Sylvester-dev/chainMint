@@ -36,6 +36,8 @@ const userSchema=new mongoose.Schema({
 
 
 userSchema.pre("save " , async function(next){
+
+    //omly run function if password is Modified else next()
     if (!this.isModified("password")) return next();
 
     //hash password 
