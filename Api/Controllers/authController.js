@@ -38,7 +38,6 @@ exports.signUp =async (req , res, next)=>{
     passwordConfirm:req.body.passwordConfirm,
  })   
  createSendToken(newUser, 201 , req, res);
-
 }
 
 

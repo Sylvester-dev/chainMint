@@ -1,8 +1,8 @@
 const express=require("express")
 const cors=require("cors");
 
-const nftRouter=require ("./Api/Routers/nftRouter")
-const userRouter=require ("./Api/Routers/userRouter");
+const nftRouter=require("./Api/Routers/nftRouter");
+const userRouter=require("./Api/Routers/userRouter");
 
 
 //MIDDLEWARE
@@ -16,4 +16,4 @@ app.options("*" , cors());
 app.use("/api/v1/NFTs" , nftRouter);
 app.use("api/v1/user" , userRouter);
 
-module.exports=app;
+module.exports = app;

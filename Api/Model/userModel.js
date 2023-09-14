@@ -1,7 +1,7 @@
-const mongoose=require("mongoose");
-const bcrypt=require("bcryptjs");
+const mongoose = require("mongoose");
+const bcrypt = require("bcryptjs");
 
-const userSchema=new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     name:{
      type:String,
      require:[true , "Please tell us your name"],
@@ -77,5 +77,5 @@ userSchema.methods.changedPasswordAfter=function (JWTTimestamp){
     return false
 };
 
-const User=mongoose.model("User" , userSchema);
-module.exports=User;
+const User = mongoose.model("User" , userSchema);
+module.exports = User;
